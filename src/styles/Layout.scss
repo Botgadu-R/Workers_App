@@ -1,0 +1,106 @@
+$primary : Red;
+
+@media (max-width: 600px) {
+    
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    
+    .outer-container{
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 2fr 7fr;
+        grid-template-rows: 60px 8fr 40px;
+    }
+    
+    .header{
+        margin: 0;
+        grid-column: 1/ span 2;
+        grid-row: 1;
+    }
+    
+    .main-content{
+        margin: 0;
+        grid-column: 1/3;
+        grid-row: 2/3;
+    }
+    
+    .outlet{
+        z-index: 98;
+        margin: 0;
+        min-width: 0;
+    }
+    
+    .sideBar{
+        background-color: white;
+        display: grid;
+        position: fixed;
+        left: -200px;
+        width: 200px;
+        height: calc(100vh - 100px);
+        z-index: 99;
+        grid-template-rows: 200px repeat(8,minmax(40px,.1fr));
+        margin: 0;
+        border-right: 1px solid lightgray;
+        transition: left 300ms ease-in-out ;
+    }
+
+    .sideBarclosed{
+        left: 0px;
+    }
+    
+    .sideBaropen{
+        left: -200px;
+    }
+    .sideBarItemContainer{
+        cursor: pointer;
+        display: grid;
+        grid-template-columns: .5fr 1fr;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+
+        &:hover{
+            background-color: lightgray;
+        }
+    }
+
+    .sideBarItem{
+        padding: 5px;
+    }
+
+    .iconContainer{
+        text-align: right;
+        margin-right: 10px;
+    }
+
+    .userProfileImg{
+        display: block;
+        margin: 10% 0 0 10%;
+    }
+
+    .userName{
+        margin: 10% 0 0 15%;
+    }
+
+    .userRole{
+        margin: 2% 0 0 16%;
+        font-size: 13px;
+    }
+
+    .homeItem{
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+
+    .footer{
+        background-color: #404040;
+        margin: 0;
+        color: white;
+        grid-column: 1/ span 2;
+        grid-row: 3;
+    }
+}

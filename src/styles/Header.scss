@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    height: 100%;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1.5fr 7fr 2fr;
+}
+
+.options{
+    display: flex;
+    justify-content: space-evenly;
+    grid-column: 3;
+    text-align: center;
+    cursor: pointer;
+}
+
+.menu{
+    display: grid;
+    grid-column: 1;
+    cursor: pointer;
+    place-items: center;
+}
+
+.menuIcon{
+    grid-column: 1;
+    grid-row: 1;
+    transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
+}
+
+.iconVisible{
+    opacity: 1;
+    transform: rotate(0deg);
+}
+
+.iconHidden{
+    opacity: 0;
+    transform: rotate(90deg);
+}
+
+.brand{
+    text-align: center;
+    grid-column: 2/3;
+    cursor: pointer;
+}
