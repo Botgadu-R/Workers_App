@@ -72,6 +72,7 @@ export default function DailyReport() {
                     <div className="Name">{Worker.Name}</div>
                     <div className="Wage">{Worker.Wage}</div>
                     <div className="IsPresent">
+                      {/* Need to change this for slider button or Toggle */}
                       <input
                         type="checkbox"
                         checked={Worker.IsPresent}
