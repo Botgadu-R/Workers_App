@@ -51,7 +51,7 @@ export default function DailyReport() {
       <div className="containerGrid">
         <div className="titleContainer">
           <h2>Workers Daily Report</h2>
-          <p>Workers present today : {TodaysCount()}</p>
+          <p>Workers Attendance today : {TodaysCount()}</p>
         </div>
 
         <div className="listContainer">
