@@ -1,6 +1,7 @@
 import "../styles/DailyReport.scss";
 import { UseDailyReport } from "../services/DailyReportService";
 import { useState } from "react";
+import ToggleSwitch from "../components/ToggleSwitch";
 
 export default function DailyReport() {
   const { Workers } = UseDailyReport();
@@ -70,14 +71,12 @@ export default function DailyReport() {
                     className={"Worker " + "Worker" + workerKey}
                   >
                     <div className="Name">{Worker.Name}</div>
-                    <div className="Wage">{Worker.Wage}</div>
-                    <div className="IsPresent">
-                      {/* Need to change this for slider button or Toggle */}
-                      <input
-                        type="checkbox"
-                        checked={Worker.IsPresent}
-                        onChange={() => ToggleWorkerAttendance(workerKey)}
-                      ></input>
+                    <div className="Wage">{"$" + Worker.Wage}</div>
+                    <div
+                      onClick={() => ToggleWorkerAttendance(workerKey)}
+                      className="IsPresent"
+                    >
+                      <ToggleSwitch IsTrue={Worker.IsPresent} />
                     </div>
                   </div>
                 );

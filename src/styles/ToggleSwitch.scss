@@ -1,0 +1,44 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.switchContainer{
+    width: 50px;
+    height: 25px;
+    display: grid;
+
+    .background{
+        width: 50px;
+        height: 25px;
+        display: grid;
+        padding: 2.5px;
+        border-radius: 25px;
+
+        .circle{
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: transform 200ms ease-in-out;
+            background-color: white;
+        }
+
+        .right{
+            transform: translateX(25px);
+        }
+
+        .left{
+            transform: translateX(0px);
+        }
+    }
+
+    .backgroundright{
+        background-color: black;
+    }
+
+    .backgroundleft{
+        background-color: lightgray;
+    }
+}
